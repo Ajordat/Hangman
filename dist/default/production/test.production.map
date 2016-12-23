@@ -1,0 +1,64 @@
+MPLINK 5.08, LINKER
+Linker Map File - Created Mon Dec 19 19:39:10 2016
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000004
+                   .cinit    romdata   0x000004    program   0x000002
+                   .org_1       code   0x000008    program   0x000004
+                   .org_2       code   0x000018    program   0x00008a
+.config_300001_BUILD/DEFAULT/PRODUCTION/TEST.O    romdata   0x300001    program   0x000001
+.config_300003_BUILD/DEFAULT/PRODUCTION/TEST.O    romdata   0x300003    program   0x000001
+.config_300005_BUILD/DEFAULT/PRODUCTION/TEST.O    romdata   0x300005    program   0x000001
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000005      
+                            0x000008    0x00000b      
+                            0x000018    0x0000a1      
+                            0x300001    0x300001      
+                            0x300003    0x300003      
+                            0x300005    0x300005      
+            151 out of 8472 program addresses used, program memory utilization is 1%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                    BUCLE   0x00006e    program     static D:\ALEX\TERCER\Sistemes digitals i microprocessadors\test\test.asm
+                CINC_NOPS   0x000096    program     static D:\ALEX\TERCER\Sistemes digitals i microprocessadors\test\test.asm
+                 HIGH_INT   0x00001c    program     static D:\ALEX\TERCER\Sistemes digitals i microprocessadors\test\test.asm
+            HI_INT_VECTOR   0x000008    program     static D:\ALEX\TERCER\Sistemes digitals i microprocessadors\test\test.asm
+                INIT_INTS   0x000040    program     static D:\ALEX\TERCER\Sistemes digitals i microprocessadors\test\test.asm
+               INIT_PORTS   0x00003a    program     static D:\ALEX\TERCER\Sistemes digitals i microprocessadors\test\test.asm
+                 INIT_TMR   0x00004c    program     static D:\ALEX\TERCER\Sistemes digitals i microprocessadors\test\test.asm
+                INIT_VARS   0x000058    program     static D:\ALEX\TERCER\Sistemes digitals i microprocessadors\test\test.asm
+                  LOW_INT   0x000038    program     static D:\ALEX\TERCER\Sistemes digitals i microprocessadors\test\test.asm
+           LOW_INT_VECTOR   0x000018    program     static D:\ALEX\TERCER\Sistemes digitals i microprocessadors\test\test.asm
+                     MAIN   0x00005e    program     static D:\ALEX\TERCER\Sistemes digitals i microprocessadors\test\test.asm
+             RESET_VECTOR   0x000000    program     static D:\ALEX\TERCER\Sistemes digitals i microprocessadors\test\test.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+             RESET_VECTOR   0x000000    program     static D:\ALEX\TERCER\Sistemes digitals i microprocessadors\test\test.asm
+            HI_INT_VECTOR   0x000008    program     static D:\ALEX\TERCER\Sistemes digitals i microprocessadors\test\test.asm
+           LOW_INT_VECTOR   0x000018    program     static D:\ALEX\TERCER\Sistemes digitals i microprocessadors\test\test.asm
+                 HIGH_INT   0x00001c    program     static D:\ALEX\TERCER\Sistemes digitals i microprocessadors\test\test.asm
+                  LOW_INT   0x000038    program     static D:\ALEX\TERCER\Sistemes digitals i microprocessadors\test\test.asm
+               INIT_PORTS   0x00003a    program     static D:\ALEX\TERCER\Sistemes digitals i microprocessadors\test\test.asm
+                INIT_INTS   0x000040    program     static D:\ALEX\TERCER\Sistemes digitals i microprocessadors\test\test.asm
+                 INIT_TMR   0x00004c    program     static D:\ALEX\TERCER\Sistemes digitals i microprocessadors\test\test.asm
+                INIT_VARS   0x000058    program     static D:\ALEX\TERCER\Sistemes digitals i microprocessadors\test\test.asm
+                     MAIN   0x00005e    program     static D:\ALEX\TERCER\Sistemes digitals i microprocessadors\test\test.asm
+                    BUCLE   0x00006e    program     static D:\ALEX\TERCER\Sistemes digitals i microprocessadors\test\test.asm
+                CINC_NOPS   0x000096    program     static D:\ALEX\TERCER\Sistemes digitals i microprocessadors\test\test.asm
+
+

@@ -1,0 +1,128 @@
+MPLINK 5.08, LINKER
+Linker Map File - Created Fri Dec 23 10:40:30 2016
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000004
+                   .cinit    romdata   0x000004    program   0x000002
+                   .org_1       code   0x000008    program   0x000004
+                   .org_2       code   0x000018    program   0x0007bc
+.config_300001_BUILD/DEFAULT/PRODUCTION/TEST.O    romdata   0x300001    program   0x000001
+.config_300003_BUILD/DEFAULT/PRODUCTION/TEST.O    romdata   0x300003    program   0x000001
+.config_300005_BUILD/DEFAULT/PRODUCTION/TEST.O    romdata   0x300005    program   0x000001
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000005      
+                            0x000008    0x00000b      
+                            0x000018    0x0007d3      
+                            0x300001    0x300001      
+                            0x300003    0x300003      
+                            0x300005    0x300005      
+            1993 out of 8472 program addresses used, program memory utilization is 23%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                    BUCLE   0x000110    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+               COUNT_LINE   0x000038    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                 DEU_NOPS   0x0006ae    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+               DOTZE_NOPS   0x0006d6    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+               FORTY_NOPS   0x0006bc    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                 HIGH_INT   0x00001c    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+            HI_INT_VECTOR   0x000008    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                  HSYNC_1   0x000058    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                     ID_0   0x000138    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                     ID_1   0x00015c    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                    ID_10   0x00043a    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                    ID_11   0x0004a4    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                    ID_12   0x00050e    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                    ID_13   0x000584    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                    ID_14   0x0005d6    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                    ID_15   0x000638    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                     ID_2   0x00018a    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                     ID_3   0x0001ba    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                     ID_4   0x0001f2    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                     ID_5   0x000232    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                     ID_6   0x00027e    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                     ID_7   0x0002f2    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                     ID_8   0x000372    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                     ID_9   0x0003ce    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                INIT_INTS   0x0000d8    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+               INIT_PORTS   0x0000cc    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                 INIT_TMR   0x0000e4    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                INIT_VARS   0x0000f0    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                  LOW_INT   0x0000ca    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+           LOW_INT_VECTOR   0x000018    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                     MAIN   0x000100    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                  NEXT_IF   0x000124    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                 NOU_NOPS   0x0006a2    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                    PINTA   0x00068e    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+             PINTA_EBU_H0   0x0006e8    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+             PINTA_EBU_H1   0x00075c    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+             RESET_VECTOR   0x000000    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                 SET_NOPS   0x00069a    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+              STOP_SIGNAL   0x0000c6    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+            STOP_SIGNAL_1   0x00006a    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+           STOP_SIGNAL_10   0x00008c    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+           STOP_SIGNAL_11   0x000076    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+            STOP_SIGNAL_2   0x00009e    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+            STOP_SIGNAL_3   0x0000b6    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+             RESET_VECTOR   0x000000    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+            HI_INT_VECTOR   0x000008    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+           LOW_INT_VECTOR   0x000018    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                 HIGH_INT   0x00001c    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+               COUNT_LINE   0x000038    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                  HSYNC_1   0x000058    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+            STOP_SIGNAL_1   0x00006a    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+           STOP_SIGNAL_11   0x000076    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+           STOP_SIGNAL_10   0x00008c    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+            STOP_SIGNAL_2   0x00009e    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+            STOP_SIGNAL_3   0x0000b6    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+              STOP_SIGNAL   0x0000c6    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                  LOW_INT   0x0000ca    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+               INIT_PORTS   0x0000cc    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                INIT_INTS   0x0000d8    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                 INIT_TMR   0x0000e4    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                INIT_VARS   0x0000f0    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                     MAIN   0x000100    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                    BUCLE   0x000110    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                  NEXT_IF   0x000124    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                     ID_0   0x000138    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                     ID_1   0x00015c    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                     ID_2   0x00018a    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                     ID_3   0x0001ba    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                     ID_4   0x0001f2    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                     ID_5   0x000232    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                     ID_6   0x00027e    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                     ID_7   0x0002f2    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                     ID_8   0x000372    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                     ID_9   0x0003ce    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                    ID_10   0x00043a    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                    ID_11   0x0004a4    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                    ID_12   0x00050e    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                    ID_13   0x000584    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                    ID_14   0x0005d6    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                    ID_15   0x000638    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                    PINTA   0x00068e    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                 SET_NOPS   0x00069a    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                 NOU_NOPS   0x0006a2    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+                 DEU_NOPS   0x0006ae    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+               FORTY_NOPS   0x0006bc    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+               DOTZE_NOPS   0x0006d6    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+             PINTA_EBU_H0   0x0006e8    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+             PINTA_EBU_H1   0x00075c    program     static D:\ALEX\TERCER\assembler\test_1\test.asm
+
+
