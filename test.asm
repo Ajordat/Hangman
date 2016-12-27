@@ -147,7 +147,7 @@ INIT_VARS
     bcf LATA, 2, 0
     movlw WHITE
     movwf COLOR, 0
-    movlw 0x07
+    movlw 0x00
     movwf ERRORS, 0
     ;clrf ERRORS, 0
     return
@@ -299,8 +299,9 @@ TRAM_4
 
 TRAM_5
     movlw 0x00
+    NOP	    ;ADDED
     cpfsgt ERRORS
-    goto ID_0_SUP
+    goto ID_0_SUP_0_NOPS
     movlw 0x04
     cpfsgt ERRORS
     goto ID_2_SUP
@@ -334,6 +335,7 @@ TRAM_8
     cpfsgt ERRORS
     goto ID_0_INF_15_NOPS
     movlw 0x07
+    NOP	    ;ADDED
     cpfsgt ERRORS
     goto ID_2_INF
     goto ID_5
@@ -374,49 +376,79 @@ TRAM_14
     goto ID_15
     goto ID_10
     
+ID_0_SUP_0_NOPS
+    goto ID_0_SUP
+    
 ID_0_SUP_4_NOPS
     NOP
     NOP
+    NOP	    ;ADDED
+    NOP	    ;ADDED
+    NOP	    ;ADDED
     goto ID_0_SUP
     
 ID_0_SUP_7_NOPS
     call CINC_NOPS
+    NOP	    ;ADDED
+    NOP	    ;ADDED
+    NOP	    ;ADDED
     goto ID_0_SUP
 
 ID_0_SUP_10_NOPS
     call SET_NOPS
+    NOP
+    NOP	    ;ADDED
+    NOP	    ;ADDED
+    NOP	    ;ADDED
     NOP
     goto ID_0_SUP
     
 ID_0_SUP_13_NOPS
     call DEU_NOPS
     NOP
+    NOP	    ;ADDED
+    NOP	    ;ADDED
+    NOP
+    NOP
+    NOP	    ;ADDED
     goto ID_0_SUP
     
 ID_0_SUP_20_NOPS
     call DEU_NOPS
-    call SET_NOPS
+    call DEU_NOPS
+    NOP	    ;ADDED
+    NOP	    ;ADDED
     NOP
+    NOP	    ;ADDED
     goto ID_0_SUP
 
 ID_0_INF_12_NOPS
     call DEU_NOPS
+    NOP	;ADDED
+    NOP	;ADDED
     goto ID_0_INF
     
 ID_0_INF_15_NOPS
     call DOTZE_NOPS
     NOP
+    NOP	;ADDED
+    NOP	;ADDED
     goto ID_0_INF
     
 ID_0_INF_18_NOPS
     call DEU_NOPS
     call CINC_NOPS
+    NOP	;ADDED
+    NOP	;ADDED
+    NOP	;ADDED
     NOP
     goto ID_0_INF
         
 ID_0_INF_25_NOPS
     call DEU_NOPS
     call DOTZE_NOPS
+    NOP	;ADDED
+    NOP	;ADDED
     NOP
     goto ID_0_INF
     
@@ -440,14 +472,23 @@ ID_2_INF_4_NOPS
     goto ID_2_INF
     
 ID_0_SUP
-    call DOTZE_NOPS ;ADDED
-    NOP	    ;ADDED
+    ;call DOTZE_NOPS ;ADDED
+    call DEU_NOPS   ;ADDED
     ;call FORTY_NOPS
+    movff COLOR, LATA
+    ;movwf LATA, 0
+    ;NOP	    ;ADDED
     call FORTY_NOPS
     call FORTY_NOPS
+    clrf LATA, 0
     call FORTY_NOPS
     call FORTY_NOPS
-    call DOTZE_NOPS
+    ;call DOTZE_NOPS
+    call NOU_NOPS   ;ADDED
+    ;NOP
+    ;NOP
+    ;NOP
+    NOP
     call DOTZE_NOPS
     call DOTZE_NOPS
     goto BUCLE
@@ -455,7 +496,13 @@ ID_0_SUP
 ID_0_INF
     call SET_NOPS   ;ADDED
     ;call FORTY_NOPS
-    call FORTY_NOPS
+    call DEU_NOPS   ;ADDED
+    movff COLOR, LATA
+    call DEU_NOPS   ;ADDED
+    call DEU_NOPS   ;ADDED
+    call SET_NOPS   ;ADDED
+    clrf LATA, 0
+    ;call FORTY_NOPS
     call FORTY_NOPS
     call FORTY_NOPS
     call FORTY_NOPS
@@ -993,7 +1040,6 @@ ID_12
     NOP
     NOP
     NOP
-    NOP
     goto BUCLE
     
 ID_13
@@ -1060,12 +1106,11 @@ ID_14
     clrf LATA, 0
     NOP
     NOP
-    NOP
     goto BUCLE
     
 ID_15
     NOP
-    NOP
+    ;NOP
     NOP
     NOP
     ;call FORTY_NOPS
