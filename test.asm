@@ -121,6 +121,11 @@ INIT_PORTS
     bcf TRISA, 2, 0
     bcf TRISE, 0, 0
     bcf TRISE, 1, 0
+    bsf TRISD, 0, 0
+    bsf TRISD, 1, 0
+    bsf TRISD, 2, 0
+    bsf TRISD, 3, 0
+    bsf TRISD, 4, 0
     return
 
 INIT_INTS
@@ -147,8 +152,7 @@ INIT_VARS
     bcf LATA, 2, 0
     movlw WHITE
     movwf COLOR, 0
-    movlw 0x08
-    movwf ERRORS, 0
+    clrf ERRORS, 0
     return
     
 ;********
@@ -178,31 +182,7 @@ NEXT_IF
     goto BUCLE
     goto PINTA
     
-DECISION
-    movff PORTD, ERRORS
-    movwf 0x0F
-    andwf ERRORS, 1, 0
-    btfsc PORTD, 4, 0
-    goto VICTORY
-    btfsc PORTD, 3, 0
-    goto DEFEAT
-    goto PINTA	;PROVISIONAL
-    
-VICTORY
-    movlw GREEN
-    movwf COLOR, 0
-    goto PINTA	;PROVISIONAL
-    
-DEFEAT
-    movlw RED
-    movwf COLOR, 0
-    goto PINTA	;PROVISIONAL
-    
 PINTA		;ESTEM A LA ZONA ON PODEM PINTAR
-    ;movlw 0x00
-    ;cpfseq N_LINE_H
-    ;goto ID_10   ;INFERIOR
-    ;goto ID_4_SUP	;SUPERIOR
     movlw 0x00
     cpfseq N_LINE_H
     goto PART_INFERIOR
@@ -510,45 +490,56 @@ ID_2_INF_4_NOPS
     goto ID_2_INF
     
 ID_0_SUP
-    ;call DOTZE_NOPS ;ADDED
-    call DEU_NOPS   ;ADDED
-    ;call FORTY_NOPS
-    NOP
-    NOP
-    ;movff COLOR, LATA
-    ;movwf LATA, 0
-    ;NOP	    ;ADDED
-    call FORTY_NOPS
-    call FORTY_NOPS
-    ;clrf LATA, 0
-    NOP
-    call FORTY_NOPS
-    call FORTY_NOPS
-    ;call DOTZE_NOPS
-    call NOU_NOPS   ;ADDED
+    ;call DEU_NOPS
     ;NOP
     ;NOP
+    call FORTY_NOPS
+    call FORTY_NOPS
     ;NOP
+    call FORTY_NOPS
+    call FORTY_NOPS
+    ;goto ID_0_SUP_CONT
+    
+DECISION
+    movff PORTD, ERRORS
+    movwf 0x0F
+    andwf ERRORS, 1, 0
+    btfsc PORTD, 4, 0
+    goto VICTORY
+    btfsc PORTD, 3, 0
+    goto DEFEAT
+    NOP
+    ;NOP
+    ;NOP
+    goto ID_0_SUP_CONT
+    
+VICTORY
+    movlw GREEN
+    movwf COLOR, 0
+    NOP
+    NOP
+    goto ID_0_SUP_CONT
+    
+DEFEAT
+    movlw RED
+    movwf COLOR, 0
+    NOP
+    
+ID_0_SUP_CONT
+    call NOU_NOPS
     NOP
     call DOTZE_NOPS
     call DOTZE_NOPS
     goto BUCLE
     
 ID_0_INF
-    ;call SET_NOPS   ;ADDED
-    ;call FORTY_NOPS
-    ;NOP
-    ;NOP
-    call DEU_NOPS   ;ADDED
+    call DEU_NOPS
     NOP
     NOP
-    ;movff COLOR, LATA
-    call DEU_NOPS   ;ADDED
-    call DEU_NOPS   ;ADDED
-    call SET_NOPS   ;ADDED
-    ;clrf LATA, 0
+    call DEU_NOPS
+    call DEU_NOPS
+    call SET_NOPS
     NOP
-    ;call FORTY_NOPS
     call FORTY_NOPS
     call FORTY_NOPS
     call FORTY_NOPS
@@ -640,8 +631,9 @@ ID_3
     NOP
     NOP
     ;NOP
-    NOP
-    movwf LATA, 0
+    movff COLOR, LATA
+    ;NOP
+    ;movwf LATA, 0
     NOP
     NOP
     NOP
@@ -665,8 +657,9 @@ ID_4_SUP
     ;NOP	    ;ADDED
     ;call FORTY_NOPS
     NOP
-    NOP
-    movwf LATA, 0
+    movff COLOR, LATA
+    ;NOP
+    ;movwf LATA, 0
     NOP
     NOP
     NOP
