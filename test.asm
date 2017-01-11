@@ -392,7 +392,8 @@ ID_0_SUP_10_NOPS
     
 ID_0_SUP_13_NOPS
     call DEU_NOPS
-    call SET_NOPS
+    call CINC_NOPS
+    NOP
     goto ID_0_SUP
     
 ID_0_SUP_20_NOPS
@@ -547,8 +548,9 @@ ID_2_SUP
     goto BUCLE
     
 ID_2_SUP_V2
-    call DEU_NOPS
-    call CINC_NOPS
+    call SET_NOPS
+    call SET_NOPS
+    NOP
     movwf LATA, 0
     NOP
     NOP
@@ -673,8 +675,10 @@ ID_4_INF
     goto BUCLE
     
 ID_5
-    call DEU_NOPS
-    call DEU_NOPS
+    call SET_NOPS
+    call SET_NOPS
+    call CINC_NOPS
+    NOP
     movwf LATA, 0
     NOP
     NOP
